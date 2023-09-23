@@ -317,7 +317,6 @@ function getDoneTasks(tasks) {
         if (tasks[i].done) {
             doneTasks++;
         }
-        console.log(doneTasks);
     }
     return doneTasks;
 }
@@ -687,7 +686,6 @@ document.addEventListener("click", (e) => {
     if (e.target.id === "editLeftTodo") {
         const todoId = e.target.dataset.task;
         editTodo = todoId && todoWithoutTasks.find((t) => t.id === +todoId);
-        console.log(editTodo);
         todoDetails.classList.remove("open");
         hiddenItems();
         openEditForm();
@@ -747,7 +745,6 @@ formAddTodo.addEventListener("submit", (e) => {
         };
         let newTodo;
         if (todo.tasks.length <= 0) {
-            console.log(todo);
             newTodo = {
                 id: todoWithoutTasks.length + 1,
                 time: todo.time,
