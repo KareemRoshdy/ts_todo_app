@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="style/all.min.css" />
+    <link rel="stylesheet" href="style/simple-line-icons.css" />
+    <link rel="stylesheet" href="style/style.css" />
+
+    <title>Todo App</title>
+  </head>
+  <body>
+    <header class="header flex align-center space-between">
+      <h4>welcome back!</h4>
+      <div class="flex align-center space-between">
+        <h4>activity</h4>
+        <button class="btn" id="newTodo">create new todo</button>
+      </div>
+    </header>
+
+    <main class="root">
+      <div class="root-content flex gap-15">
+        <div class="left-side">
+          <div class="left-container">
+            <div class="cards">
+              <div class="card card-style flex align-center gap-10">
+                <div class="image">
+                  <img
+                    src="assets/logo.png"
+                    width="40"
+                    height="40"
+                    alt="image"
+                  />
+                </div>
+
+                <div class="content">
+                  <h5 class="title">Coming event</h5>
+                  <p class="text">meet mohammed in cafe at 07:00 PM</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="watch card-style flex align-center justify-center column"
+            >
+              <h1 class="time">06:19 PM</h1>
+              <h4 class="date">Saturday, 20, 2023</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="right-side">
+          <div class="right-container">
+            <h4 class="heading">Activity</h4>
+            <div class="activity-cards flex align-center gap-15">
+              <!-- <div class="activity-card card-style">
+                <div class="color"></div>
+                <h5 class="title">the standard Lorem ipsum dolor sit amet..</h5>
+                <p class="text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing...
+                </p>
+
+                <div class="card-ctrl flex align-center space-between">
+                  <div class="card-status flex align-center gap-10">
+                    <div class="check flex align-center gap-10">
+                      <i class="icon-check"></i>
+                      <span class="check-number">5</span>
+                    </div>
+
+                    <div class="done-or-not flex align-center gap-15">
+                      <span class="done">done</span>
+                      <div class="not-done flex align-center gap-5">
+                        <span class="circle"></span>
+                        <span class="not-done-number">4</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-setting flex align-center gap-10">
+                    <div class="date">02/10/2023</div>
+                    <div class="edit-delete flex align-center gap-10">
+                      <span class="edit" id="edit-todo">edit</span>
+                      <span class="delete" id="delete-todo">delete</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="activity-card card-style">
+                <div class="color"></div>
+                <h5 class="title">the standard Lorem ipsum dolor sit amet..</h5>
+                <p class="text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing...
+                </p>
+
+                <div class="card-ctrl flex align-center space-between">
+                  <div class="card-status flex align-center gap-10">
+                    <div class="check flex align-center gap-10">
+                      <i class="icon-check"></i>
+                      <span class="check-number">5</span>
+                    </div>
+
+                    <div class="done-or-not flex align-center gap-15">
+                      <span class="done">done</span>
+                      <div class="not-done flex align-center gap-5">
+                        <span class="circle"></span>
+                        <span class="not-done-number">4</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-setting flex align-center gap-10">
+                    <div class="date">02/10/2023</div>
+                    <div class="edit-delete flex align-center gap-10">
+                      <span class="edit" id="edit-todo">edit</span>
+                      <span class="delete" id="delete-todo">delete</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="activity-card card-style">
+                <div class="color"></div>
+                <h5 class="title">the standard Lorem ipsum dolor sit amet..</h5>
+                <p class="text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing...
+                </p>
+
+                <div class="card-ctrl flex align-center space-between">
+                  <div class="card-status flex align-center gap-10">
+                    <div class="check flex align-center gap-10">
+                      <i class="icon-check"></i>
+                      <span class="check-number">5</span>
+                    </div>
+
+                    <div class="done-or-not flex align-center gap-15">
+                      <span class="done">done</span>
+                      <div class="not-done flex align-center gap-5">
+                        <span class="circle"></span>
+                        <span class="not-done-number">4</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-setting flex align-center gap-10">
+                    <div class="date">02/10/2023</div>
+                    <div class="edit-delete flex align-center gap-10">
+                      <span class="edit" id="edit-todo">edit</span>
+                      <span class="delete" id="delete-todo">delete</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="activity-card card-style">
+                <div class="color"></div>
+                <h5 class="title">the standard Lorem ipsum dolor sit amet..</h5>
+                <p class="text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing...
+                </p>
+
+                <div class="card-ctrl flex align-center space-between">
+                  <div class="card-status flex align-center gap-10">
+                    <div class="check flex align-center gap-10">
+                      <i class="icon-check"></i>
+                      <span class="check-number">5</span>
+                    </div>
+
+                    <div class="done-or-not flex align-center gap-15">
+                      <span class="done">done</span>
+                      <div class="not-done flex align-center gap-5">
+                        <span class="circle"></span>
+                        <span class="not-done-number">4</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-setting flex align-center gap-10">
+                    <div class="date">02/10/2023</div>
+                    <div class="edit-delete flex align-center gap-10">
+                      <span class="edit" id="edit-todo">edit</span>
+                      <span class="delete" id="delete-todo">delete</span>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Form Add Todo -->
+    <section class="form-add-todo">
+      <div class="form-add-todo-container">
+        <form id="formAddTodo">
+          <div class="form-heading flex align-center space-between gap-15">
+            <div class="flex align-center gap-15">
+              <i class="fas fa-arrow-left back-home" id="backHome"></i>
+              <h3>Add Todo</h3>
+            </div>
+
+            <button class="btn form-add-btn" id="formAddBtn">Add</button>
+          </div>
+
+          <div class="input-group">
+            <input type="text" placeholder="todo title" id="todoTitle" />
+          </div>
+
+          <div class="input-group flex gap-15">
+            <div class="left-inputs">
+              <input type="time" placeholder="todo time" id="todoTime" />
+              <textarea
+                name="content"
+                placeholder="todo Content"
+                id="todoContent"
+                cols="30"
+                rows="20"
+              ></textarea>
+
+              <div class="input-group">
+                <input type="color" id="todoColor" class="input-color" />
+                <label
+                  for="todoColor"
+                  class="chose-color flex align-center justify-center gap-10"
+                >
+                  <div class="color-value"></div>
+                  <p>chose color</p>
+                </label>
+              </div>
+            </div>
+
+            <div class="right-inputs">
+              <div class="items-container">
+                <!-- <div class="item-box flex align-center space-between gap-10">
+                  <div class="item-box-left flex align-center gap-5">
+                    <span class="circle"></span>
+                    <p class="item-text">on the other hand</p>
+                  </div>
+                  <div class="item-box-date">
+                    <p>7:20 Am</p>
+                  </div>
+                </div> -->
+              </div>
+
+              <div
+                class="flex align-center gap-10 justify-center add-more-item"
+                id="addMoreItem"
+              >
+                <i class="icon-plus"></i>
+                <span>add More Item</span>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="todo-tasks flex align-center justify-center">
+        <div class="todo-tasks-container">
+          <i class="icon-close close-todo-task"></i>
+          <form class="todo-task-form" id="todoTaskForm">
+            <div class="input-group">
+              <input type="text" placeholder="todo task" id="todoTaskInput" />
+              <input type="time" placeholder="time" id="todoTaskTimeInput" />
+            </div>
+            <button class="btn" id="addTodoTask">add task</button>
+          </form>
+
+          <form class="todo-edit-task-form" id="todoEditTaskForm">
+            <div class="input-group">
+              <input
+                type="text"
+                placeholder="todo task"
+                id="editTodoTaskInput"
+              />
+              <input
+                type="time"
+                placeholder="time"
+                id="todoEditTaskTimeInput"
+              />
+            </div>
+            <button class="btn" id>edit task</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form Edit Todo -->
+    <section class="form-edit-todo">
+      <div class="form-edit-todo-container">
+        <form id="formeEditTodo">
+          <div class="form-heading flex align-center space-between gap-15">
+            <div class="flex align-center gap-15">
+              <i class="fas fa-arrow-left back-home" id="editBackHome"></i>
+              <h3>Edit Todo</h3>
+            </div>
+
+            <button class="btn form-edit-btn">Edit</button>
+          </div>
+
+          <div class="input-group">
+            <input type="text" placeholder="todo title" id="editTodoTitle" />
+          </div>
+
+          <div class="input-group flex gap-15">
+            <div class="left-inputs">
+              <input type="time" placeholder="todo time" id="editTodoTime" />
+              <textarea
+                name="content"
+                placeholder="todo Content"
+                id="editTodoContent"
+                cols="30"
+                rows="20"
+              ></textarea>
+
+              <div class="input-group">
+                <input type="color" id="editTodoColor" class="input-color" />
+                <label
+                  for="editTodoColor"
+                  class="chose-color chose-color-edit flex align-center justify-center gap-10"
+                >
+                  <div class="color-value color-value-edit"></div>
+                  <p>chose color</p>
+                </label>
+              </div>
+            </div>
+
+            <div class="right-inputs">
+              <div class="edit-items-container">
+                <!-- <div class="item-box flex align-center space-between gap-10">
+                      <div class="item-box-left flex align-center gap-5">
+                        <span class="circle"></span>
+                        <p class="item-text">on the other hand</p>
+                      </div>
+                      <div class="item-box-date">
+                        <p>7:20 Am</p>
+                      </div>
+                    </div> -->
+              </div>
+
+              <div
+                class="flex align-center gap-10 justify-center add-more-item"
+                id="addMoreItemEdit"
+              >
+                <i class="icon-plus"></i>
+                <span>add More Item</span>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="todo-tasks todo-tasks_edit flex align-center justify-center">
+        <div class="todo-tasks-container">
+          <i class="icon-close close-todo-task close-todo-task_edit"></i>
+          <form class="todo-task-form" id="todoTaskForm_edit">
+            <div class="input-group">
+              <input
+                type="text"
+                placeholder="todo task"
+                id="todoTaskInput_edit"
+              />
+              <input
+                type="time"
+                placeholder="time"
+                id="todoTaskTimeInput_edit"
+              />
+            </div>
+            <button class="btn" id="addTodoTask_edit">add task</button>
+          </form>
+
+          <form class="todo-edit-task-form" id="todoEditTaskForm_edit">
+            <div class="input-group">
+              <input
+                type="text"
+                placeholder="todo task"
+                id="editTodoTaskInput_edit"
+              />
+              <input
+                type="time"
+                placeholder="time"
+                id="todoEditTaskTimeInput_edit"
+              />
+            </div>
+            <button class="btn" id>edit task</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Todo Details -->
+    <section class="todo-details">
+      <div class="todo-details-container">
+        <div class="todo-details-ctrl flex align-center gap-20">
+          <i class="icon-close close-todo" id="closeTodo"></i>
+        </div>
+
+        <div class="todo-details-heading">
+          <!-- <h4 class="todo-title">
+            can you help translate this site into a foreign
+          </h4>
+          <p class="todo-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus qui
+            magni assumenda. At, pariatur quaerat?
+          </p> -->
+        </div>
+
+        <div class="todo-details-tasks-container">
+          <!-- <div class="task-item-box flex align-center space-between">
+            <div class="left flex align-center gap-10">
+              <span class="circle"></span>
+              <h4 class="task-title">injected humour</h4>
+            </div>
+
+            <div class="right">
+              <p class="todo-time">02:10 Am</p>
+            </div>
+          </div> -->
+        </div>
+        <div class="ctrl flex align-center gap-20"></div>
+      </div>
+    </section>
+
+    <script src="src/js/dist/index.js"></script>
+  </body>
+</html>
